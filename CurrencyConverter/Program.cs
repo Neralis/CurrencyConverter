@@ -3,9 +3,9 @@ using Microsoft.Extensions.FileProviders;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-DefaultFilesOptions options = new DefaultFilesOptions
+DefaultFilesOptions options = new()
 {
-    DefaultFileNames = new List<string> { "Pages/index.html" }
+    DefaultFileNames = ["Pages/index.html"]
 };
 
 app.UseDefaultFiles(options);
