@@ -5,12 +5,46 @@
     <title>Конвертер валют (тестовый)</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/images/icos/converter.svg">
+    <script src="/js/scripts.js"></script>
 </head>
 
 <body>
     <div>
-        <h1><img src="images/icos/converter.svg" width="72" height="72"  /> Конвертер валют по курсу ЦБР</h1>
+        <h1 align="center"><img src="images/icos/converter.svg" width="72" height="72" class="icos"/> Конвертер валют по курсу ЦБР</h1>
     </div>
-    
+
+    <table>
+        <tr>
+            <td width="48%">
+                <select class="custom-select">
+                    <option value="0">Выберите валюту:</option>
+                    <option value="1">Рубль</option>
+                    <option value="2">Доллар</option>
+                    <option value="3">Евро</option>
+                </select>
+            </td>
+            <td width="4%">
+                
+            </td>
+            <td width="48%">
+                
+            </td>
+        </tr>
+        <tr>
+            <td width="48%">
+                <input  class="currency-input" type="text"/>
+            </td>
+            <td width="4%">
+                <img src="images/icos/equal.svg" width="64" class="icos" />
+            </td>
+            <td width="48%">
+                <input  class="currency-input" type="text"/>
+            </td>
+        </tr>
+        
+    </table>
+
+
 </body>
+
 </html>
