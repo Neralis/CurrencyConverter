@@ -38,7 +38,7 @@ async function convertCurrency() {
         result = (fromAmount * fromRate) / toRate;
     }
 
-    document.getElementById('toAmount').value = result.toFixed(2);
+    document.getElementById('toAmount').value = result.toFixed(5);
 }
 
 // Обработчики событий для изменения полей ввода и select'ов

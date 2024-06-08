@@ -3,6 +3,13 @@
     font-size:30px;
 }
 
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/Ubuntu-Regular.tff') format('tff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .icos{
     vertical-align:bottom; 
 }
