@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Services\CurrencyRateService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Include="wwwroot\Pages\index.html" />
     <None Include="wwwroot\css\style.css" />
   </ItemGroup>

@@ -26,3 +26,12 @@ table{
     width: 60%;
     font-size: 32px;
 }
+
+.custom-select {
+    width: 80%;
+    overflow: auto;
+}
+
+.custom-select option {
+    overflow: auto;
+}

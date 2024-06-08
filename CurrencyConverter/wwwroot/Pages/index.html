@@ -5,45 +5,131 @@
     <title>Конвертер валют (тестовый)</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/images/icos/converter.svg">
-    <script src="/js/scripts.js"></script>
 </head>
 
 <body>
     <div>
-        <h1 align="center"><img src="images/icos/converter.svg" width="72" height="72" class="icos"/> Конвертер валют по курсу ЦБР</h1>
+        <h1 align="center"><img src="images/icos/converter.svg" width="72" height="72" class="icos" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" /> Конвертер валют по курсу ЦБР</h1>
     </div>
 
     <table>
         <tr>
             <td width="48%">
-                <select class="custom-select">
-                    <option value="0">Выберите валюту:</option>
-                    <option value="1">Рубль</option>
-                    <option value="2">Доллар</option>
-                    <option value="3">Евро</option>
+                <select id="fromCurrency" class="custom-select">
+                    <option value="0" selected disabled hidden>Выберите валюту:</option>
+                    <option value="RUB">Российский рубль</option>
+                    <option value="AUD">Австралийский доллар</option>
+                    <option value="AZN">Азербайджанский манат</option>
+                    <option value="GBP">Фунт стерлингов Соединенного королевства</option>
+                    <option value="AMD">Армянский драм</option>
+                    <option value="BYN">Белорусский рубль</option>
+                    <option value="BGN">Болгарский лев</option>
+                    <option value="BRL">Бразильский реал</option>
+                    <option value="HUF">Венгерский форинт</option>
+                    <option value="VND">Вьетнамский донг</option>
+                    <option value="HKD">Гонконгский доллар</option>
+                    <option value="GEL">Грузинский лари</option>
+                    <option value="DKK">Датская крона</option>
+                    <option value="AED">Дирхам ОАЭ</option>
+                    <option value="USD">Доллар США</option>
+                    <option value="EUR">Евро</option>
+                    <option value="EGP">Египетский фунт</option>
+                    <option value="INR">Индийская рупия</option>
+                    <option value="IDR">Индонезийская рупия</option>
+                    <option value="KZT">Казахстанский тенге</option>
+                    <option value="CAD">Канадский доллар</option>
+                    <option value="QAR">Катарский риал</option>
+                    <option value="KGS">Киргизский сом</option>
+                    <option value="CNY">Китайский юань</option>
+                    <option value="MDL">Молдавский лей</option>
+                    <option value="NZD">Новозеландский доллар</option>
+                    <option value="NOK">Норвежская крона</option>
+                    <option value="PLN">Польский злотый</option>
+                    <option value="RON">Румынский лей</option>
+                    <option value="XDR">СДР (специальные права заимствования)</option>
+                    <option value="SGD">Сингапурский доллар</option>
+                    <option value="TJS">Таджикский сомони</option>
+                    <option value="THB">Таиландский бат</option>
+                    <option value="TRY">Турецкая лира</option>
+                    <option value="TMT">Новый туркменский манат</option>
+                    <option value="UZS">Узбекский сум</option>
+                    <option value="UAH">Украинская гривна</option>
+                    <option value="CZK">Чешская крона</option>
+                    <option value="SEK">Шведская крона</option>
+                    <option value="CHF">Швейцарский франк</option>
+                    <option value="RSD">Сербский динар</option>
+                    <option value="ZAR">Южноафриканский рэнд</option>
+                    <option value="KRW">Вон Республики Корея</option>
+                    <option value="JPY">Японская иена</option>
                 </select>
             </td>
             <td width="4%">
-                
             </td>
             <td width="48%">
-                
+                <select id="toCurrency" class="custom-select">
+                    <option value="0" selected disabled hidden>Выберите валюту:</option>
+                    <option value="RUB">Российский рубль</option>
+                    <option value="AUD">Австралийский доллар</option>
+                    <option value="AZN">Азербайджанский манат</option>
+                    <option value="GBP">Фунт стерлингов Соединенного королевства</option>
+                    <option value="AMD">Армянский драм</option>
+                    <option value="BYN">Белорусский рубль</option>
+                    <option value="BGN">Болгарский лев</option>
+                    <option value="BRL">Бразильский реал</option>
+                    <option value="HUF">Венгерский форинт</option>
+                    <option value="VND">Вьетнамский донг</option>
+                    <option value="HKD">Гонконгский доллар</option>
+                    <option value="GEL">Грузинский лари</option>
+                    <option value="DKK">Датская крона</option>
+                    <option value="AED">Дирхам ОАЭ</option>
+                    <option value="USD">Доллар США</option>
+                    <option value="EUR">Евро</option>
+                    <option value="EGP">Египетский фунт</option>
+                    <option value="INR">Индийская рупия</option>
+                    <option value="IDR">Индонезийская рупия</option>
+                    <option value="KZT">Казахстанский тенге</option>
+                    <option value="CAD">Канадский доллар</option>
+                    <option value="QAR">Катарский риал</option>
+                    <option value="KGS">Киргизский сом</option>
+                    <option value="CNY">Китайский юань</option>
+                    <option value="MDL">Молдавский лей</option>
+                    <option value="NZD">Новозеландский доллар</option>
+                    <option value="NOK">Норвежская крона</option>
+                    <option value="PLN">Польский злотый</option>
+                    <option value="RON">Румынский лей</option>
+                    <option value="XDR">СДР (специальные права заимствования)</option>
+                    <option value="SGD">Сингапурский доллар</option>
+                    <option value="TJS">Таджикский сомони</option>
+                    <option value="THB">Таиландский бат</option>
+                    <option value="TRY">Турецкая лира</option>
+                    <option value="TMT">Новый туркменский манат</option>
+                    <option value="UZS">Узбекский сум</option>
+                    <option value="UAH">Украинская гривна</option>
+                    <option value="CZK">Чешская крона</option>
+                    <option value="SEK">Шведская крона</option>
+                    <option value="CHF">Швейцарский франк</option>
+                    <option value="RSD">Сербский динар</option>
+                    <option value="ZAR">Южноафриканский рэнд</option>
+                    <option value="KRW">Вон Республики Корея</option>
+                    <option value="JPY">Японская иена</option>
+                </select>
             </td>
         </tr>
         <tr>
             <td width="48%">
-                <input  class="currency-input" type="text"/>
+                <input id="fromAmount" class="currency-input" type="text" />
             </td>
             <td width="4%">
-                <img src="images/icos/equal.svg" width="64" class="icos" />
+                <img src="images/icos/equal.svg" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" width="64" class="icos" />
             </td>
             <td width="48%">
-                <input  class="currency-input" type="text"/>
+                <input id="toAmount" class="currency-input" type="text" readonly />
             </td>
         </tr>
-        
+
     </table>
 
+    <script src="/js/scripts.js"></script>
 
 </body>
 
